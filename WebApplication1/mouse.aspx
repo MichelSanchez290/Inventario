@@ -46,7 +46,7 @@
              <br />
              <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-             <asp:Button ID="Button1" runat="server" Text="Guardar" />
+             <asp:Button ID="Button1" runat="server" Text="Guardar" OnClick="Button1_Click" />
 &nbsp;&nbsp;&nbsp;
              <asp:Button ID="Button3" runat="server" Text="Editar" />
 &nbsp;&nbsp;

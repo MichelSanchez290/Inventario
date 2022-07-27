@@ -70,3 +70,9 @@ D:\proyectoweb\Inventario\WebApplication1\obj\Debug\Inventario.csproj.CoreCompil
 D:\proyectoweb\Inventario\WebApplication1\obj\Debug\Inventario.csproj.CopyComplete
 D:\proyectoweb\Inventario\WebApplication1\obj\Debug\WebApplication1.dll
 D:\proyectoweb\Inventario\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassAccesoDatosSQL22.dll
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassBLInventario.dll
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassCapaEntidad.dll
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassAccesoDatosSQL22.pdb
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassBLInventario.pdb
+D:\proyectoweb\Inventario\WebApplication1\bin\ClassCapaEntidad.pdb
