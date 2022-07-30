@@ -35,11 +35,11 @@ C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntid
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\bin\ClassBLInventario.pdb
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\bin\ClassCapaEntidad.pdb
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\Inventario.csprojAssemblyReference.cache
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\Inventario.csproj.CoreCompileInputs.cache
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\Inventario.csproj.CopyComplete
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\WebApplication1.pdb
+<<<<<<< HEAD
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.dll.config
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.dll
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.pdb
@@ -82,3 +82,6 @@ C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\Inventari
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\Inventario.csproj.CopyComplete
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\WebApplication1.pdb
+=======
+C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\Inventario.csprojAssemblyReference.cache
+>>>>>>> origin/Michelle
