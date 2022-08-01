@@ -134,7 +134,7 @@ namespace ClassBLInventario
 
         public DataTable ObtenTodasMarcasParaDiscoDuro(ref string mensaje)
         {
-            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 12 and Idmarca = Id_Marca";
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 4 and Idmarca = Id_Marca";
             DataSet obtener = null;
             DataTable salida = null;
             obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
@@ -147,7 +147,7 @@ namespace ClassBLInventario
 
         public DataTable ObtenTodasMarcasParaGabinete(ref string mensaje)
         {
-            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 13 and Idmarca = Id_Marca";
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 7 and Idmarca = Id_Marca";
             DataSet obtener = null;
             DataTable salida = null;
             obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
