@@ -40,6 +40,7 @@ C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntid
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\WebApplication1.dll
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\WebApplication1.pdb
 <<<<<<< HEAD
+<<<<<<< HEAD
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.dll.config
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.dll
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\bin\WebApplication1.pdb
@@ -84,4 +85,6 @@ C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\WebApplic
 C:\Users\Lenovo\3D Objects\prueba\Inventario\WebApplication1\obj\Debug\WebApplication1.pdb
 =======
 C:\Users\Lenovo\Desktop\9no cuatri\profe memo\Producto_Inventario\ClassCapaEntidad\WebApplication1\obj\Debug\Inventario.csprojAssemblyReference.cache
+>>>>>>> origin/Michelle
+=======
 >>>>>>> origin/Michelle
