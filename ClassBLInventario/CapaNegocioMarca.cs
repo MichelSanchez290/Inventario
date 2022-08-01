@@ -131,5 +131,44 @@ namespace ClassBLInventario
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
             return salida;
         }
+
+        public DataTable ObtenTodasMarcasParaDiscoDuro(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 12 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public DataTable ObtenTodasMarcasParaGabinete(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 13 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public DataTable ObtenTodasMarcasIDMarc(ref string mensaje)
+        {
+            string consulta = "select Id_Marca, Marca from marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
     }
 }
