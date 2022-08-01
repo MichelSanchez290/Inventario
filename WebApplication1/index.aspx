@@ -207,7 +207,7 @@
 
 	<div class="left-side-bar">
 		<div class="brand-logo">
-			<a href="index.html">
+			<a href="index.aspx">
 				<img src="vendors/images/deskapp-logo.svg" alt="" class="dark-logo">
 				<img src="vendors/images/deskapp-logo-white.svg" alt="" class="light-logo">
 			</a>
@@ -215,6 +215,7 @@
 				<i class="ion-close-round"></i>
 			</div>
 		</div>
+        
 		<div class="menu-block customscroll">
 			<div class="sidebar-menu">
 				<ul id="accordion-menu">
@@ -223,8 +224,24 @@
 							<span class="micon dw dw-house-1"></span><span class="mtext">Home</span>
 						</a>
 						<ul class="submenu">
-							<li><a href="index.html">Dashboard style 1</a></li>
-							<li><a href="index2.html">Dashboard style 2</a></li>
+							<li><a href="componentes.aspx">Componentes</a></li>
+							<li><a href="ubicacion.aspx">Ubicacion</a></li>
+                            <li><a href="laboratorio.aspx">Laboratorio</a></li>
+							<li><a href="tiporam.aspx">Tipo RAM</a></li>
+                            <li><a href="ram.aspx">RAM</a></li>
+							<li><a href="discoduro.aspx">Disco Duro</a></li>
+                            <li><a href="tipocpu.aspx">Tipo CPU</a></li>
+							<li><a href="cantdiscos.aspx">Cantidad de Discos</a></li>
+                            <li><a href="gabinete.aspx">Gabinete</a></li>
+							<li><a href="marcompo.aspx">Marca con Componente</a></li>
+							<li><a href="marca.aspx">Marca</a></li>
+							<li><a href="modelocpu.aspx">Modelo CPU</a></li>
+							<li><a href="monitor.aspx">Monitor</a></li>
+							<li><a href="mouse.aspx">Mouse</a></li>
+							<li><a href="teclado.aspx">Teclado</a></li>
+							<li><a href="computadorafinal.aspx">Computadora Final</a></li>
+							<li><a href="cpugenerico.aspx">CPU Generico</a></li>
+
 						</ul>
 					</li>
 					

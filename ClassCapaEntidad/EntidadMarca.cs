@@ -10,7 +10,7 @@ namespace ClassCapaEntidad
     {
         public int Id_Marca { get; set; }
         public string Marca { get; set; }
-        public string Id_Componente { get; set; }
+        
         public string Extra { get; set; }
     }
 }

@@ -77,6 +77,34 @@ namespace ClassBLInventario
             return lista;
         }
 
+        public List<EntidadModeloCPU> DevuelveIdModeloCPU(ref string mensaje)
+        {
+            List<EntidadModeloCPU> lista = new List<EntidadModeloCPU>();
+            SqlDataReader atrapa = null;
+            SqlConnection cn = null;
+            cn = operacion.AbrirConexion(ref mensaje);
+            string consulta = "select * from ModeloCPU";
+            atrapa = operacion.ConsultaDR(consulta, cn, ref mensaje);
+            if (atrapa != null)
+            {
+                while (atrapa.Read())
+                {
+                    lista.Add(new EntidadModeloCPU()
+                    {
+                        id_modcpu = (int)atrapa[0],
+                        modeloCPU = atrapa[1].ToString(),
+                        f_marca = Convert.ToInt16(atrapa[2])
+
+                    }
+                    ); ;
+
+                }
+            }
+            cn.Close();
+            cn.Dispose();
+            return lista;
+        }
+
         public DataTable ObtenTodModeloCPU(ref string mensaje)
         {
             string consulta = "Select * from ModeloCPU";
@@ -90,14 +118,27 @@ namespace ClassBLInventario
             return salida;
         }
 
+        public DataTable DevuelveMarc(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 6 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
         public Boolean EliminarModeloCPU(EntidadModeloCPU nuevo, ref string m)
         {
-            string sentencia = "DELETE FROM ModeloCPU WHERE modeloCPU = @mod";
+            string sentencia = "DELETE FROM ModeloCPU WHERE id_modcpu = @id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
-                new SqlParameter("mod",SqlDbType.VarChar,50),
+                new SqlParameter("id",SqlDbType.Int),
             };
-            coleccion[0].Value = nuevo.modeloCPU;
+            coleccion[0].Value = nuevo.id_modcpu;
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
             return salida;

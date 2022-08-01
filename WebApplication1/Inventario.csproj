@@ -77,23 +77,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="actualizacion.aspx" />
-    <Content Include="asignar.aspx" />
     <Content Include="cantdiscos.aspx" />
-    <Content Include="computadorafinal.aspx" />
+    <Content Include="componentes.aspx" />
     <Content Include="cpugenerico.aspx" />
     <Content Include="discoduro.aspx" />
     <Content Include="gabinete.aspx" />
     <Content Include="index.aspx" />
     <Content Include="laboratorio.aspx" />
     <Content Include="marca.aspx" />
+    <Content Include="marcompo.aspx" />
     <Content Include="modelocpu.aspx" />
     <Content Include="monitor.aspx" />
     <Content Include="mouse.aspx" />
     <Content Include="ram.aspx" />
     <Content Include="teclado.aspx" />
+    <Content Include="tipocpu.aspx" />
     <Content Include="tiporam.aspx" />
     <Content Include="ubicacion.aspx" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="computadorafinal.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="actualizacion.aspx.cs">
@@ -103,13 +107,6 @@
     <Compile Include="actualizacion.aspx.designer.cs">
       <DependentUpon>actualizacion.aspx</DependentUpon>
     </Compile>
-    <Compile Include="asignar.aspx.cs">
-      <DependentUpon>asignar.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="asignar.aspx.designer.cs">
-      <DependentUpon>asignar.aspx</DependentUpon>
-    </Compile>
     <Compile Include="cantdiscos.aspx.cs">
       <DependentUpon>cantdiscos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -117,12 +114,12 @@
     <Compile Include="cantdiscos.aspx.designer.cs">
       <DependentUpon>cantdiscos.aspx</DependentUpon>
     </Compile>
-    <Compile Include="computadorafinal.aspx.cs">
-      <DependentUpon>computadorafinal.aspx</DependentUpon>
+    <Compile Include="componentes.aspx.cs">
+      <DependentUpon>componentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="computadorafinal.aspx.designer.cs">
-      <DependentUpon>computadorafinal.aspx</DependentUpon>
+    <Compile Include="componentes.aspx.designer.cs">
+      <DependentUpon>componentes.aspx</DependentUpon>
     </Compile>
     <Compile Include="cpugenerico.aspx.cs">
       <DependentUpon>cpugenerico.aspx</DependentUpon>
@@ -166,6 +163,13 @@
     <Compile Include="marca.aspx.designer.cs">
       <DependentUpon>marca.aspx</DependentUpon>
     </Compile>
+    <Compile Include="marcompo.aspx.cs">
+      <DependentUpon>marcompo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="marcompo.aspx.designer.cs">
+      <DependentUpon>marcompo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="modelocpu.aspx.cs">
       <DependentUpon>modelocpu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -202,6 +206,13 @@
     <Compile Include="teclado.aspx.designer.cs">
       <DependentUpon>teclado.aspx</DependentUpon>
     </Compile>
+    <Compile Include="tipocpu.aspx.cs">
+      <DependentUpon>tipocpu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="tipocpu.aspx.designer.cs">
+      <DependentUpon>tipocpu.aspx</DependentUpon>
+    </Compile>
     <Compile Include="tiporam.aspx.cs">
       <DependentUpon>tiporam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -215,6 +226,13 @@
     </Compile>
     <Compile Include="ubicacion.aspx.designer.cs">
       <DependentUpon>ubicacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="computadorafinal.aspx.cs">
+      <DependentUpon>computadorafinal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="computadorafinal.aspx.designer.cs">
+      <DependentUpon>computadorafinal.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

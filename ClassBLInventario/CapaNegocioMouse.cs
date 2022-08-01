@@ -37,13 +37,13 @@ namespace ClassBLInventario
 
         public Boolean ModificarMouse(EntidadMouse nuevo, ref string m)
         {
-            string sentencia = "UPDATE mouse set f_marcamouse = @f_maMous, conector = @con" +
+            string sentencia = "UPDATE mouse set f_marcamouse = @f_maMous, conector = @conec" +
                 "WHERE id_mouse =@id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
                 new SqlParameter("id",SqlDbType.Int),
                 new SqlParameter("f_maMous",SqlDbType.Int),
-                new SqlParameter("con",SqlDbType.VarChar,64)
+                new SqlParameter("conec",SqlDbType.VarChar,64)
             };
             coleccion[0].Value = nuevo.id_mouse;
             coleccion[1].Value = nuevo.f_marcamouse;
@@ -52,7 +52,25 @@ namespace ClassBLInventario
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
             return salida;
         }
-
+        public Boolean ModificarMousev2(EntidadMouse nuevo, ref string m)
+        {
+            string sentencia = "UPDATE mouse set f_marcamouse = @f_maM, conector = @con" +
+                " WHERE id_mouse = @id";
+            SqlParameter[] coleccion = new SqlParameter[]
+            {
+                new SqlParameter("id",SqlDbType.Int),
+                new SqlParameter("f_maM",SqlDbType.Int),
+                new SqlParameter("con",SqlDbType.VarChar,64),
+                
+            };
+            coleccion[0].Value = nuevo.id_mouse;
+            coleccion[1].Value = nuevo.f_marcamouse;
+            coleccion[2].Value = nuevo.conector;
+            
+            Boolean salida = false;
+            salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
+            return salida;
+        }
         public List<EntidadMouse> DevuelveInfoMouse(ref string mensaje)
         {
             List<EntidadMouse> lista = new List<EntidadMouse>();
@@ -93,14 +111,27 @@ namespace ClassBLInventario
 
         public Boolean EliminarMouse(EntidadMouse nuevo, ref string m)
         {
-            string sentencia = "DELETE FROM mouse WHERE conector = @con";
+            string sentencia = "DELETE FROM mouse WHERE id_mouse = @id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
-                new SqlParameter("con",SqlDbType.VarChar,10),
+                new SqlParameter("id",SqlDbType.Int),
             };
-            coleccion[0].Value = nuevo.conector;
+            coleccion[0].Value = nuevo.id_mouse;
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
+            return salida;
+        }
+
+        public DataTable DevuelveMarc(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 1 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
             return salida;
         }
     }

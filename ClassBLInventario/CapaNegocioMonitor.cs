@@ -39,8 +39,8 @@ namespace ClassBLInventario
 
         public Boolean ModificarMonitor(EntidadMonitor nuevo, ref string m)
         {
-            string sentencia = "UPDATE monitor set f_marcat = @f_maM, conectores = @con, tamano = @tam" +
-                " WHERE id_teclado = @id";
+            string sentencia = "UPDATE monitor set f_marcam = @f_maM, conectores = @con, tamano = @tam" +
+                " WHERE id_monitor = @id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
                 new SqlParameter("id",SqlDbType.Int),
@@ -85,7 +85,7 @@ namespace ClassBLInventario
 
         public DataTable ObtenTodMonitor(ref string mensaje)
         {
-            string consulta = "Select * from monitor";
+            string consulta = "select id_monitor,Id_Marca,Marca,conectores, tamano from monitor, Marca where f_marcam=Id_Marca";
             DataSet obtener = null;
             DataTable salida = null;
             obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
@@ -98,14 +98,27 @@ namespace ClassBLInventario
 
         public Boolean EliminarMonitor(EntidadMonitor nuevo, ref string m)
         {
-            string sentencia = "DELETE FROM monitor WHERE conectores = @con";
+            string sentencia = "DELETE FROM monitor WHERE id_monitor = @mon";
             SqlParameter[] coleccion = new SqlParameter[]
             {
-                new SqlParameter("con",SqlDbType.VarChar,64),
+                new SqlParameter("mon",SqlDbType.Int),
             };
-            coleccion[0].Value = nuevo.conectores;
+            coleccion[0].Value = nuevo.id_monitor;
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
+            return salida;
+        }
+
+        public DataTable DevuelveMarc(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 3 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
             return salida;
         }
     }

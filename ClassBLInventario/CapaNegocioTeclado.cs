@@ -93,12 +93,45 @@ namespace ClassBLInventario
 
         public Boolean EliminarTeclado(EntidadTeclado nuevo, ref string m)
         {
-            string sentencia = "DELETE FROM teclado WHERE conector = @con";
+            string sentencia = "DELETE FROM teclado WHERE id_teclado = @id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
-                new SqlParameter("con",SqlDbType.VarChar,5),
+                new SqlParameter("id",SqlDbType.Int),
             };
-            coleccion[0].Value = nuevo.conector;
+            coleccion[0].Value = nuevo.id_teclado;
+            Boolean salida = false;
+            salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
+            return salida;
+        }
+
+        public DataTable DevuelveMarc(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 2 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public Boolean ModificarTecladov2(EntidadTeclado nuevo, ref string m)
+        {
+            string sentencia = "UPDATE teclado set f_marcat = @f_maM, conector = @con" +
+                " WHERE id_teclado = @id";
+            SqlParameter[] coleccion = new SqlParameter[]
+            {
+                new SqlParameter("id",SqlDbType.Int),
+                new SqlParameter("f_maM",SqlDbType.Int),
+                new SqlParameter("con",SqlDbType.VarChar,64),
+
+            };
+            coleccion[0].Value = nuevo.id_teclado;
+            coleccion[1].Value = nuevo.f_marcat;
+            coleccion[2].Value = nuevo.conector;
+
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
             return salida;

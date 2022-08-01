@@ -69,7 +69,7 @@ namespace ClassBLInventario
             coleccion[4].Value = nuevo.Descripcion;
             coleccion[5].Value = nuevo.f_tipoRam;
             coleccion[6].Value = nuevo.id_Gabinete;
-            coleccion[6].Value = nuevo.img;
+            coleccion[7].Value = nuevo.img;
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
             return salida;
@@ -122,14 +122,66 @@ namespace ClassBLInventario
 
         public Boolean EliminarCPUGenerico(EntidadCPUGenerico nuevo, ref string m)
         {
-            string sentencia = "DELETE FROM CPU_Generico WHERE Modelo = @mod";
+            string sentencia = "DELETE FROM CPU_Generico WHERE id_CPU = @id";
             SqlParameter[] coleccion = new SqlParameter[]
             {
-                new SqlParameter("mod",SqlDbType.VarChar,20),
+                new SqlParameter("id",SqlDbType.Int),
             };
-            coleccion[0].Value = nuevo.Modelo;
+            coleccion[0].Value = nuevo.id_CPU;
             Boolean salida = false;
             salida = operacion.ModificarBDMasSeguro(sentencia, operacion.AbrirConexion(ref m), ref m, coleccion);
+            return salida;
+        }
+
+        public DataTable ObtenTodoTipoCPU(ref string mensaje)
+        {
+            string consulta = "Select * from Tipo_CPU";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public DataTable DevuelveMarc(ref string mensaje)
+        {
+            string consulta = "select  Id_Marca,Marca from marcom, marca where Idcomponente = 5 and Idmarca = Id_Marca";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public DataTable ObtenTodaRAM(ref string mensaje)
+        {
+            string consulta = "Select * from RAM";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
+            return salida;
+        }
+
+        public DataTable ObtenTodasGabinete(ref string mensaje)
+        {
+            string consulta = "Select * from Gabinete";
+            DataSet obtener = null;
+            DataTable salida = null;
+            obtener = operacion.ConsultaDataSet(consulta, operacion.AbrirConexion(ref mensaje), ref mensaje);
+            if (obtener != null)
+            {
+                salida = obtener.Tables[0];
+            }
             return salida;
         }
     }
