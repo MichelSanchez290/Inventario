@@ -77,10 +77,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="actualizacion.aspx" />
+<<<<<<< HEAD
     <Content Include="cantdiscos.aspx" />
     <Content Include="componentes.aspx" />
     <Content Include="computadorafinal.aspx" />
     <Content Include="consultas.aspx" />
+=======
+    <Content Include="asignar.aspx" />
+    <Content Include="cantdiscos.aspx" />
+    <Content Include="computadorafinal.aspx" />
+>>>>>>> origin/LuisAngel
     <Content Include="cpugenerico.aspx" />
     <Content Include="discoduro.aspx" />
     <Content Include="gabinete.aspx" />
@@ -93,12 +99,18 @@
     <Content Include="mouse.aspx" />
     <Content Include="ram.aspx" />
     <Content Include="teclado.aspx" />
+<<<<<<< HEAD
     <Content Include="tipocpu.aspx" />
     <Content Include="tiporam.aspx" />
     <Content Include="ubicacion.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
+=======
+    <Content Include="tiporam.aspx" />
+    <Content Include="ubicacion.aspx" />
+    <Content Include="Web.config" />
+>>>>>>> origin/LuisAngel
   </ItemGroup>
   <ItemGroup>
     <Compile Include="actualizacion.aspx.cs">
@@ -108,6 +120,16 @@
     <Compile Include="actualizacion.aspx.designer.cs">
       <DependentUpon>actualizacion.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
+=======
+    <Compile Include="asignar.aspx.cs">
+      <DependentUpon>asignar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="asignar.aspx.designer.cs">
+      <DependentUpon>asignar.aspx</DependentUpon>
+    </Compile>
+>>>>>>> origin/LuisAngel
     <Compile Include="cantdiscos.aspx.cs">
       <DependentUpon>cantdiscos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -115,6 +137,7 @@
     <Compile Include="cantdiscos.aspx.designer.cs">
       <DependentUpon>cantdiscos.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="componentes.aspx.cs">
       <DependentUpon>componentes.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -122,6 +145,8 @@
     <Compile Include="componentes.aspx.designer.cs">
       <DependentUpon>componentes.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/LuisAngel
     <Compile Include="computadorafinal.aspx.cs">
       <DependentUpon>computadorafinal.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -129,6 +154,7 @@
     <Compile Include="computadorafinal.aspx.designer.cs">
       <DependentUpon>computadorafinal.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="consultas.aspx.cs">
       <DependentUpon>consultas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -136,6 +162,8 @@
     <Compile Include="consultas.aspx.designer.cs">
       <DependentUpon>consultas.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/LuisAngel
     <Compile Include="cpugenerico.aspx.cs">
       <DependentUpon>cpugenerico.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -221,6 +249,7 @@
     <Compile Include="teclado.aspx.designer.cs">
       <DependentUpon>teclado.aspx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="tipocpu.aspx.cs">
       <DependentUpon>tipocpu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,6 +257,8 @@
     <Compile Include="tipocpu.aspx.designer.cs">
       <DependentUpon>tipocpu.aspx</DependentUpon>
     </Compile>
+=======
+>>>>>>> origin/LuisAngel
     <Compile Include="tiporam.aspx.cs">
       <DependentUpon>tiporam.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

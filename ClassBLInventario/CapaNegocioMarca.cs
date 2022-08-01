@@ -70,8 +70,8 @@ namespace ClassBLInventario
                 {
                     lista.Add(new EntidadMarca()
                     {
-                        Marca = atrapa[1].ToString(),
-                        Id_Componente = atrapa[2].ToString(),
+                        Id_Componente = atrapa[1].ToString(),
+                        Marca = atrapa[2].ToString(),
                         Extra = atrapa[3].ToString()
                     }
                     );

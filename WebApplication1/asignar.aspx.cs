@@ -13,33 +13,31 @@ using ClassCapaEntidad;
 
 namespace WebApplication1
 {
-    public partial class mouse : System.Web.UI.Page
+
+    public partial class asignar : System.Web.UI.Page
     {
-        CapaNegocioMouse nuevo = null;
-        //CapaNegocioComponentes V = null;
+        CapaNegocioComponentes nueva = null;
+        CapaNegocioMarca pruev1 = null;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(IsPostBack)
+            
+            if (IsPostBack)
             {
-                nuevo = new CapaNegocioMouse(ConfigurationManager.ConnectionStrings["nueva"].ConnectionString);
-                Session["Nuevo"] = nuevo;
+                nueva = new CapaNegocioComponentes(ConfigurationManager.ConnectionStrings["nueva"].ConnectionString);
+                Session["Nuevo"] = nueva;
 
-                
+
 
             }
             else
             {
-                nuevo = (CapaNegocioMouse)Session["nueva"];
+                nueva = (CapaNegocioComponentes)Session["Nuevo"];
             }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //EntidadMouse guardar = new EntidadMouse()
-            //{
-            //    f_marcamouse =  
-                
-            //}
+            
         }
     }
 }

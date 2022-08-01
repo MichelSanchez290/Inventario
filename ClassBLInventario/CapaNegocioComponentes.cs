@@ -125,5 +125,32 @@ namespace ClassBLInventario
             }
             return salida;
         }
+
+        public List<EntidadComponentes> DevuelmMouse(ref string mensaje)
+        {
+            List<EntidadComponentes> lista = new List<EntidadComponentes>();
+            SqlDataReader atrapa = null;
+            SqlConnection cn = null;
+            cn = operacion.AbrirConexion(ref mensaje);
+            string consulta = "select Marca from commar, marca where Idcomponentes = 1 and id_marca = Idmarca";
+            atrapa = operacion.ConsultaDR(consulta, cn, ref mensaje);
+            if (atrapa != null)
+            {
+                while (atrapa.Read())
+                {
+                    lista.Add(new EntidadComponentes()
+                    {
+                        categoria = atrapa[1].ToString(),
+                    }
+                    );
+
+                }
+            }
+            cn.Close();
+            cn.Dispose();
+            return lista;
+        }
+
+        
     }
 }
